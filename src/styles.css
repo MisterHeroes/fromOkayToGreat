@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #f4f6f6;
+  --ft-color: #0095a8;
+  --selection-color: #ddeff2;
+
+  --nav-bg-color: #009999;
+  --nav-ft-color: #f1f1f3;
+  --nav-bg-actv: #00cccc;
+}
+.dark-mode {
+  --bg-color: #031417;
+  --ft-color: #16a3b6;
+  --selection-color: #073a41;
+}
+
+body {
+  margin: 40px auto;
+  width: clamp(45ch, 50%, 75ch);
+  line-height: 1.6;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  color: var(--ft-color);
+  padding: 0 1rem;
+  scroll-padding: 2rem 0 0 0;
+}
+
+::selection {
+  background-color: var(--selection-color);
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.8rem;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  background-color: var(--nav-bg-color);
+  color: var(--nav-ft-color);
+  padding: 0.3rem 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+nav ul li:hover {
+  transform: scale(1.2);
+}
+
+.active {
+  background-color: var(--nav-bg-actv);
+}
