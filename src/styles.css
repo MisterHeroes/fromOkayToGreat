@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap');
+
 :root {
   --bg-color: #f4f6f6;
   --ft-color: #0095a8;
@@ -77,4 +79,27 @@ nav ul li:hover {
 
 .active {
   background-color: var(--nav-bg-actv);
+}
+
+.lesson {
+  background-color: #031417;
+  padding: 1.4rem;
+}
+
+
+pre {
+  background-color: #031417;
+}
+
+code {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.code-comment {
+  color:dimgrey;
+  font-style: italic;
+}
+
+.code-comment::before {
+  content: '// ';
 }
