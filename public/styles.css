@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap');
+
 :root {
   --bg-color: #f4f6f6;
   --ft-color: #0095a8;
@@ -34,12 +36,25 @@ body {
   background-color: var(--selection-color);
 }
 
-a,
+a,  
 a:hover,
 a:focus,
 a:active {
   text-decoration: none;
   color: inherit;
+}
+
+.skip-nav-link {
+  position: absolute;
+  z-index: 2;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+  transform: translateY(-120%); 
+  transition: transform 325ms ease-in;
+}
+
+.skip-nav-link:focus {
+  transform: translateY(0);
 }
 
 nav ul {
@@ -64,4 +79,27 @@ nav ul li:hover {
 
 .active {
   background-color: var(--nav-bg-actv);
+}
+
+.lesson {
+  background-color: #031417;
+  padding: 1.4rem;
+}
+
+
+pre {
+  background-color: #031417;
+}
+
+code {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.code-comment {
+  color:dimgrey;
+  font-style: italic;
+}
+
+.code-comment::before {
+  content: '// ';
 }
